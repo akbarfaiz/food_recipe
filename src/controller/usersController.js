@@ -3,7 +3,7 @@ const {selectUsers,insertUsers,selectUsersById,selectUsersByName,deleteUsersById
 const UsersController = {
     getDetailUsers: async (req,res,next)=>{
         try {
-            let id = req.params.id
+            let id = req.payload.id
             let data = await selectUsersById(id)
         
             if(data.rows[0]){
@@ -64,7 +64,7 @@ const UsersController = {
     },
     updateUsers: async (req,res,next)=>{
         try {
-            let id = req.params.id
+            let id = req.payload.id
             let name = req.body.name
     
             let checkData = await selectUsersById(id)

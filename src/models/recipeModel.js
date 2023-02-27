@@ -2,7 +2,24 @@ const Pool = require('../config/db')
 
 const selectRecipe = (data) => {
   let {search,sortby,sort,page,limit} = data
-  getQuery = `SELECT recipe.name,recipe.ingredient,recipe.created_at as post_time, users.name as creator, category.name as category FROM recipe JOIN category ON recipe.category_id=category.id JOIN users ON recipe.users_id=users.id WHERE recipe.name ILIKE '%${search}%' AND recipe.deleted_at IS NULL ORDER BY recipe.${sortby} ${sort}`
+  getQuery = `
+    SELECT 
+      recipe.name,
+      recipe.ingredient,
+      recipe.created_at as post_time, 
+      category.name as category,
+      users.name as creator,
+      recipe.photo
+    FROM 
+      recipe 
+    JOIN 
+      category ON recipe.category_id=category.id 
+    JOIN 
+      users ON users.id = users_id 
+    WHERE 
+      recipe.name ILIKE '%${search}%' AND recipe.deleted_at IS NULL 
+    ORDER BY 
+      recipe.${sortby} ${sort}`
   if (page && limit) {
     getQuery += ` OFFSET ${(page-1)*limit} LIMIT ${limit}`
   }
@@ -15,13 +32,56 @@ const insertRecipe = (data) => {
   let {name,ingredient,photo,users_id,category_id} = data
   let time = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
   return Pool.query(
-    `INSERT INTO recipe(name,ingredient,photo,created_at,users_id,category_id) VALUES('${name}','${ingredient}','${photo}','${time}','${users_id}','${category_id}')`
+    `INSERT INTO 
+      recipe(name,ingredient,photo,created_at,users_id,category_id) 
+    VALUES('${name}','${ingredient}','${photo}','${time}','${users_id}','${category_id}')`
   );
 }
+const selectRecipeByUserId = (data) => {
+  console.log(data)
+  let {search,sortby,sort,id} = data
+  return Pool.query(
+    `SELECT 
+      recipe.name,
+      recipe.ingredient,
+      recipe.created_at as post_time, 
+      category.name as category,
+      users.name as creator,
+      recipe.photo
+    FROM 
+      recipe 
+    JOIN 
+      category ON recipe.category_id=category.id
+    JOIN 
+      users ON users.id = users_id
+    WHERE 
+      recipe.name ILIKE '%${search}%' AND recipe.deleted_at IS NULL AND recipe.users_id='${id}' 
+    ORDER BY 
+      recipe.${sortby} ${sort}`
+  );
+}
+
 const selectRecipeById = (data) => {
   console.log(data)
   return Pool.query(
-    `SELECT * FROM recipe WHERE id = ${data} AND deleted_at IS NULL`
+    `SELECT 
+      recipe.name,
+      recipe.ingredient,
+      recipe.created_at as post_time, 
+      category.name as category,
+      users.name as creator,
+      recipe.photo,
+      recipe.deleted_at as delete_time,
+      recipe.users_id,
+      recipe.category_id
+    FROM 
+      recipe 
+    JOIN 
+      category ON recipe.category_id=category.id
+    JOIN 
+      users ON users.id = users_id
+    WHERE 
+      recipe.id = ${data}`
   );
 }
 
@@ -37,8 +97,17 @@ const updateRecipe = (id,data) => {
   console.log(id,data)
   let {name,ingredient,photo,users_id,category_id} = data
   return Pool.query(
-    `UPDATE recipe SET name = '${name}', ingredient = '${ingredient}', photo = '${photo}', users_id = ${users_id}, category_id = ${category_id} WHERE id = ${id};`
+    `UPDATE 
+      recipe 
+    SET 
+      name = '${name}', 
+      ingredient = '${ingredient}', 
+      photo = '${photo}', 
+      users_id = '${users_id}', 
+      category_id = ${category_id} 
+    WHERE 
+      id = ${id};`
   );
 }
 
-module.exports = {selectRecipe,insertRecipe,selectRecipeById,deleteRecipeById,updateRecipe}
+module.exports = {selectRecipe,insertRecipe,selectRecipeByUserId,selectRecipeById,deleteRecipeById,updateRecipe}

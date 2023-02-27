@@ -1,13 +1,20 @@
-const {selectRecipe,insertRecipe,selectRecipeById,deleteRecipeById,updateRecipe} = require('../models/recipeModel')
+const {selectRecipe,insertRecipe,selectRecipeByUserId,selectRecipeById,deleteRecipeById,updateRecipe} = require('../models/recipeModel')
+const cloudinary = require("../config/cloudinary")
 
 const recipeController = {
     getDetailRecipe: async (req,res,next)=>{
         try {
-            let id = req.params.id
-            let data = await selectRecipeById(id)
+            let {search,sortby,sort} = req.query
+            let data = {
+                search: search || '',
+                sortby: sortby || 'created_at',
+                sort: sort || 'ASC',
+                id: req.payload.id
+            }
+            let dataCheck = await selectRecipeByUserId(data)
         
-            if(data.rows[0]){
-                res.status(200).json({status:200,message:`data recipe found`,data:data.rows})
+            if(dataCheck.rows[0]){
+                res.status(200).json({status:200,message:`data recipe found`,data:dataCheck.rows})
             } else {
                 res.status(400).json({status:400,message:`data recipe not found`})
             }   
@@ -38,30 +45,43 @@ const recipeController = {
     },
     postRecipe: async (req,res,next)=>{
         try {
-            let {name,ingredient,photo,users_id,category_id} = req.body
-            let data = {name,ingredient,photo,users_id,category_id}
-            let dataCheck = {
-                search: name,
-                sortby: 'created_at',
-                sort: 'ASC'
-            }
-            let input = null
-    
-            input = await insertRecipe(data)
-    
-            let checkData = await selectRecipe(dataCheck)
-    
-            if(!checkData.rows[0]){
-                res.status(404).json({status:404,message:`data input failed`})
+            const imageUrl = await cloudinary.uploader.upload(req.file.path,{folder:'food'})
+
+            console.log('imageUrl', imageUrl)
+
+            if(!imageUrl){
+                res.status(404).json({status:404,message:`input data failed, failed to upload photo`})
             } else {
-                res.status(200).json({status:200,message:`data input successfully`,data:checkData.rows})
-            }   
+                let data = {}
+                data.name = req.body.name
+                data.photo = imageUrl.secure_url
+                data.users_id = req.payload.id
+                data.ingredient = req.body.ingredient
+                data.category_id = req.body.category_id
+                
+                let result = await insertRecipe(data)
+    
+                data.search = data.name
+                data.sortby = 'created_at'
+                data.sort = 'DESC'
+                data.page = 1
+                data.limit = 1
+    
+                let cekData = await selectRecipe(data)
+        
+                if(!cekData.rows[0]){
+                    res.status(404).json({status:404,message:`Input data failed`})
+                } else {
+                    res.status(200).json({status:200,message:`Input data success`,data:cekData.rows}) 
+                }
+            }  
         } catch (error) {
             next(error)
         }
     },
     deleteRecipe: async (req,res,next)=>{
         try {
+            let userId = req.payload.id
             let id = req.params.id
             let dlt = null
     
@@ -69,9 +89,13 @@ const recipeController = {
             if (!checkData.rows[0]) {
                 res.status(404).json({status:404,message:`id invalid`})
             } else {
-                dlt = await deleteRecipeById(id)
-                checkData = await selectRecipeById(id)
-                res.status(200).json({status:200,message:`data delete successfully`,data:checkData.rows})
+                if (userId == checkData.rows[0].users_id) {
+                    dlt = await deleteRecipeById(id)
+                    checkData = await selectRecipeById(id)
+                    res.status(200).json({status:200,message:`data delete successfully`,data:checkData.rows})   
+                } else {
+                    res.status(401).json({status:401,message:`this data isn't your`})
+                }
             }
         } catch (error) {
             next(error)
@@ -86,15 +110,20 @@ const recipeController = {
             let users_id = req.body.users_id
             let category_id = req.body.category_id
             let data = {name,ingredient,photo,users_id,category_id}
+            let userId = req.payload.id
     
             let checkData = await selectRecipeById(id)
     
             if (!checkData.rows[0]) {
                 res.status(404).json({status:404,message:`id invalid`})
             } else {
-                await updateRecipe(id,data)
-                let newData = await selectRecipeById(id)
-                res.status(200).json({status:200,message:`update data successfully`,data:newData.rows})
+                if (userId == checkData.rows[0].users_id) {
+                    await updateRecipe(id,data)
+                    let newData = await selectRecipeById(id)
+                    res.status(200).json({status:200,message:`update data successfully`,data:newData.rows})
+                } else {
+                    res.status(401).json({status:401,message:`this data isn't your`})
+                }
             }   
         } catch (error) {
             next(error)

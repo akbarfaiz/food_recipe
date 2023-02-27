@@ -11,6 +11,7 @@ const port = 4000
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.use("/",mainRouter)
+app.use('/img',express.static('./tmp'))
 
 app.use('*',function(req, res) {
         res.status(404).json({

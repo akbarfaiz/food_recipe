@@ -77,7 +77,7 @@ const CategoryController = {
             } else {
                 await updateCategory(id,name)
                 let newData = await selectCategoryById(id)
-                res.status(200).json({status:200,message:`data delete successfully`,data:newData.rows})
+                res.status(200).json({status:200,message:`data update successfully`,data:newData.rows})
             }   
         } catch (error) {
             next(error)

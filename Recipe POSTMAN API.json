@@ -7,405 +7,606 @@
 	},
 	"item": [
 		{
-			"name": "GET USERS",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/users",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET USERS by ID",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/users/2",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"users",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST USERS",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"Tari\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "USERS",
+			"item": [
+				{
+					"name": "GET USERS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:4000/users",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "UPDATE USERS",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"Mari\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:4000/users/3",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"users",
-						"3"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DELETE USERS",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/users/delete/18",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"users",
-						"delete",
-						"18"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET CATEGORY",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/category",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"category"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET CATEGORY by ID",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/category/1",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"category",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST CATEGORY",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"Side Dish\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:4000/category",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"category"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "UPDATE CATEGORY",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"Snack\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:4000/category/2",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"category",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DELETE CATEGORY",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/category/delete/4",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"category",
-						"delete",
-						"4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET RECIPE",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/recipe",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"recipe"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET RECIPE by ID",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/recipe/1",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"recipe",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET RECIPE SEARCH",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/recipe?search=Sate",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"recipe"
-					],
-					"query": [
-						{
-							"key": "search",
-							"value": "Sate"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET RECIPE SORT",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/recipe?sortby=created_at&sort=desc&page=1&limit=10",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"recipe"
-					],
-					"query": [
-						{
-							"key": "sortby",
-							"value": "created_at"
+				{
+					"name": "GET USERS by ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0YzRiMmE2LTJhOWUtNDJhNS04Y2VhLTliMzIwZmU2YTg5NSIsImVtYWlsIjoidXV5NTY2NDlAb21laWUuY29tIiwibmFtZSI6IlV1eSIsInBob3RvIjpudWxsLCJ2YWxpZCI6MSwib3RwIjoiNTM0NjAxIiwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjdUMDA6NTQ6MjYuMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjc3NDg0NTk5LCJleHAiOjE2Nzg3OTg1OTl9.fLtGdEAPt66s0_M3TbKkhzTOcvDWpwZiEnVlcfrjdIo",
+									"type": "string"
+								}
+							]
 						},
-						{
-							"key": "sort",
-							"value": "desc"
-						},
-						{
-							"key": "page",
-							"value": "1"
-						},
-						{
-							"key": "limit",
-							"value": "10"
-						},
-						{
-							"key": "search",
-							"value": "Goreng",
-							"disabled": true
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/users/myProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"myProfile"
+							]
 						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST RECIPE",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"Sate Padang\",\r\n    \"ingredient\" : \"Daging,Bumbu Padang,Tusuk Sate\",\r\n    \"photo\" : \"sate.png\",\r\n    \"users_id\" : 1,\r\n    \"category_id\" : 1\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:4000/recipe",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"recipe"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "UPDATE RECIPE",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"Nasi Rebus\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "POST USERS (Not Update)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Tari\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/users",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "localhost:4000/recipe/1",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"recipe",
-						"1"
-					]
+				{
+					"name": "UPDATE USERS",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"AKbar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/users/updateProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"updateProfile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE USERS (Not Update)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/users/delete/18",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"delete",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER USERS",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"uuy56649@omeie.com\", \r\n    \"name\":\"Uuy\", \r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LOGIN USERS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"uuy56649@omeie.com\", \r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VERIFICATION USERS",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/auth/otp/84c4b2a6-2a9e-42a5-8cea-9b320fe6a895/534601",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"auth",
+								"otp",
+								"84c4b2a6-2a9e-42a5-8cea-9b320fe6a895",
+								"534601"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "DELETE RECIPE",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:4000/recipe/delete/4",
-					"host": [
-						"localhost"
-					],
-					"port": "4000",
-					"path": [
-						"recipe",
-						"delete",
-						"4"
-					]
+			"name": "CATEGORY",
+			"item": [
+				{
+					"name": "GET CATEGORY",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/category",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET CATEGORY by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST CATEGORY",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Side Dish\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/category",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE CATEGORY",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Snack\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/category/2",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE CATEGORY",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/category/delete/4",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"delete",
+								"4"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "RECIPE",
+			"item": [
+				{
+					"name": "GET RECIPE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/recipe",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"recipe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET RECIPE by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:4000/recipe/myRecipe",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"recipe",
+								"myRecipe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET RECIPE SEARCH",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/recipe?search=Sate",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"recipe"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Sate"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET RECIPE SORT",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/recipe?sortby=created_at&sort=desc&page=1&limit=10",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"recipe"
+							],
+							"query": [
+								{
+									"key": "sortby",
+									"value": "created_at"
+								},
+								{
+									"key": "sort",
+									"value": "desc"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "search",
+									"value": "Goreng",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST RECIPE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Roti Bakar",
+									"type": "text"
+								},
+								{
+									"key": "ingredient",
+									"value": "Roti dan Selai Cokelat",
+									"type": "text"
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/masfa/Downloads/Image/roti.jpeg"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:4000/recipe",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"recipe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE RECIPE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Sate Bakar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/recipe/update/5",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"recipe",
+								"update",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE RECIPE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/recipe/delete/1",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"recipe",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
