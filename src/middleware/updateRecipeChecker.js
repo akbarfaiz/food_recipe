@@ -1,10 +1,11 @@
 const {selectRecipeById} = require('../models/recipeModel')
+const cloudinary = require("../config/cloudinary")
 
 const updateRecipeChecker = async (req,res,next) => {
     let id = req.params.id
     let name = req.body.name
     let ingredient = req.body.ingredient
-    let photo = req.body.photo
+    let photo = req.file
     let users_id = req.body.users_id
     let category_id = req.body.category_id
     let data = {name,ingredient,photo,users_id,category_id}
@@ -20,6 +21,9 @@ const updateRecipeChecker = async (req,res,next) => {
     
     if(!photo){
         req.body.photo = oldData.rows[0].photo
+    } else {
+        const imageUrl = await cloudinary.uploader.upload(req.file.path,{folder:'food'})
+        req.body.photo = imageUrl.secure_url
     }
 
     if(!users_id){

@@ -16,7 +16,7 @@ SELECT * FROM users;
 
 INSERT INTO users(name) VALUES('Bambang');
 
-UPDATE users SET name = 'Akbar' WHERE id = 1;
+UPDATE users SET name = 'Akbar' WHERE email = 'akbar@mail.com';
 
 UPDATE users SET role = 'User';
 

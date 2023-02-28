@@ -45,16 +45,46 @@ const recipeController = {
     },
     postRecipe: async (req,res,next)=>{
         try {
-            const imageUrl = await cloudinary.uploader.upload(req.file.path,{folder:'food'})
+            if (req.file) {
+                if (!req.isFileValid) {
+                    res.status(404).json({status:404,message:`${req.isFileValidMessage || `Your file is not png or jpg type`}`})
+                } else {
+                    const imageUrl = await cloudinary.uploader.upload(req.file.path,{folder:'food'})
 
-            console.log('imageUrl', imageUrl)
-
-            if(!imageUrl){
-                res.status(404).json({status:404,message:`input data failed, failed to upload photo`})
-            } else {
+                    console.log('imageUrl', imageUrl)
+        
+                    if(!imageUrl){
+                        res.status(404).json({status:404,message:`input data failed, failed to upload photo`})
+                    } else {
+                        let data = {}
+                        data.name = req.body.name
+                        data.photo = imageUrl.secure_url
+                        data.users_id = req.payload.id
+                        data.ingredient = req.body.ingredient
+                        data.category_id = req.body.category_id
+                        
+                        let result = await insertRecipe(data)
+            
+                        data.search = data.name
+                        data.sortby = 'created_at'
+                        data.sort = 'DESC'
+                        data.page = 1
+                        data.limit = 1
+            
+                        let cekData = await selectRecipe(data)
+                
+                        if(!cekData.rows[0]){
+                            res.status(404).json({status:404,message:`Input data failed`})
+                        } else {
+                            res.status(200).json({status:200,message:`Input data success`,data:cekData.rows}) 
+                        }
+                    }
+                }
+            } 
+            else {
                 let data = {}
                 data.name = req.body.name
-                data.photo = imageUrl.secure_url
+                data.photo = 'https://res.cloudinary.com/dfwx7ogug/image/upload/v1677589653/food/image_404_kto6wz.jpg'
                 data.users_id = req.payload.id
                 data.ingredient = req.body.ingredient
                 data.category_id = req.body.category_id
@@ -74,7 +104,7 @@ const recipeController = {
                 } else {
                     res.status(200).json({status:200,message:`Input data success`,data:cekData.rows}) 
                 }
-            }  
+            } 
         } catch (error) {
             next(error)
         }

@@ -10,6 +10,6 @@ router.get('/myRecipe',protect,getDetailRecipe)
 router.get('/',getRecipe)
 router.post('/',protect,upload.single('photo'),postRecipe)
 router.delete('/delete/:id',protect,deleteRecipe)
-router.put('/update/:id',protect,updateRecipeChecker,updateRecipe)
+router.put('/update/:id',protect,upload.single('photo'),updateRecipeChecker,updateRecipe)
 
 module.exports = router
