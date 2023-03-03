@@ -21,7 +21,7 @@ const selectCategoryById = (data) => {
 const selectCategoryByName = (data) => {
   console.log(data)
   return Pool.query(
-    `SELECT * FROM category WHERE name ='${data} WHERE deleted_at IS NULL'`
+    `SELECT * FROM category WHERE name ='${data}' AND deleted_at IS NULL`
   );
 }
 

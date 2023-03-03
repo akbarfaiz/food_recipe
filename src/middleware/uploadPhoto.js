@@ -9,17 +9,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({
     storage,
-    limits: {fileSize: 10  * Math.pow(1024,4)},
-    fileFilter: (req, file, cb) => {
-        if (file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg' || file.mimetype === 'image.jfif') {
-            cb(null, true);
-            req.isFileValid = true
-        } else {
-            req.isFileValid = false
-            req.isFileValidMessage = 'File is not png and jpg type'
-            return cb(null, false);
-        }
-    }
+    limits: {fileSize: 10  * Math.pow(1024,4)}
 })
 
 module.exports = upload

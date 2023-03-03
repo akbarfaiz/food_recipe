@@ -46,8 +46,9 @@ const recipeController = {
     postRecipe: async (req,res,next)=>{
         try {
             if (req.file) {
-                if (!req.isFileValid) {
-                    res.status(404).json({status:404,message:`${req.isFileValidMessage || `Your file is not png or jpg type`}`})
+                console.log(req.file.mimetype,typeof(req.file.mimetype))
+                if (req.file.mimetype != 'image/png' && req.file.mimetype != 'image/jpg' && req.file.mimetype != 'image/jpeg' && req.file.mimetype != 'image/jfif') {
+                    res.status(404).json({status:404,message:`Your file is not png or jpg type`})
                 } else {
                     const imageUrl = await cloudinary.uploader.upload(req.file.path,{folder:'food'})
 

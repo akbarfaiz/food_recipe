@@ -1,3 +1,5 @@
+-- Active: 1677811754743@@149.129.241.190@5432@akbar01@public
+
 --USERS
 CREATE TABLE users(
     id VARCHAR PRIMARY KEY,
@@ -14,7 +16,7 @@ CREATE TABLE users(
 
 SELECT * FROM users;
 
-INSERT INTO users(name) VALUES('Bambang');
+INSERT INTO users(id,email,password,name,role) VALUES('fiFhDR4BDl','akbar@mail.com','123','Bambang','User');
 
 UPDATE users SET name = 'Akbar' WHERE email = 'akbar@mail.com';
 
@@ -48,7 +50,7 @@ SELECT * FROM recipe where deleted_at IS NULL;
 
 SELECT * FROM recipe ORDER BY created_at DESC OFFSET 1 LIMIT 10;
 
-UPDATE recipe SET users_id = '0b8dbf35-f98d-419f-bc71-05418e34dde7' WHERE id = 6;
+UPDATE recipe SET photo = NULL WHERE name = 'Semangka Rebus';
 
 ALTER TABLE recipe add deleted_at TIMESTAMP DEFAULT NULL;
 
