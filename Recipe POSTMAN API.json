@@ -15,11 +15,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/users",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/users",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"users"
 							]
@@ -35,7 +37,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0YzRiMmE2LTJhOWUtNDJhNS04Y2VhLTliMzIwZmU2YTg5NSIsImVtYWlsIjoidXV5NTY2NDlAb21laWUuY29tIiwibmFtZSI6IlV1eSIsInBob3RvIjpudWxsLCJ2YWxpZCI6MSwib3RwIjoiNTM0NjAxIiwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjdUMDA6NTQ6MjYuMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjc3NDg0NTk5LCJleHAiOjE2Nzg3OTg1OTl9.fLtGdEAPt66s0_M3TbKkhzTOcvDWpwZiEnVlcfrjdIo",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhMmUwYzhjLTAxMTgtNGM0OC04YzFlLTcxYzQ0ZDRhZmEwMiIsImVtYWlsIjoiYnZoODg5NDBAbmV6aWQuY29tIiwibmFtZSI6IkJ2aCIsInBob3RvIjpudWxsLCJ2YWxpZCI6MSwib3RwIjoiMTk1OTI0IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDM6MjY6MjcuMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjc3ODE0MjY1LCJleHAiOjE2NzkxMjgyNjV9.Ahq0wrbiKKdu7QezoQGcz0oQyxtl7UpSdqT-6-1_Y3I",
 									"type": "string"
 								}
 							]
@@ -43,11 +45,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/users/myProfile",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/users/myProfile",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"users",
 								"myProfile"
@@ -91,7 +95,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhMmUwYzhjLTAxMTgtNGM0OC04YzFlLTcxYzQ0ZDRhZmEwMiIsImVtYWlsIjoiYnZoODg5NDBAbmV6aWQuY29tIiwibmFtZSI6IkJ2aCIsInBob3RvIjpudWxsLCJ2YWxpZCI6MSwib3RwIjoiMTk1OTI0IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDM6MjY6MjcuMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjc3ODE0MjY1LCJleHAiOjE2NzkxMjgyNjV9.Ahq0wrbiKKdu7QezoQGcz0oQyxtl7UpSdqT-6-1_Y3I",
 									"type": "string"
 								}
 							]
@@ -100,7 +104,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"AKbar\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Hvb\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -108,11 +112,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:4000/users/updateProfile",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/users/updateProfile",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"users",
 								"updateProfile"
@@ -148,7 +154,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"uuy56649@omeie.com\", \r\n    \"name\":\"Uuy\", \r\n    \"password\":\"123\"\r\n}",
+							"raw": "{\r\n    \"email\":\"bvh88940@nezid.com\", \r\n    \"name\":\"Bvh\", \r\n    \"password\":\"123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -156,11 +162,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:4000/auth/register",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/auth/register",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"auth",
 								"register"
@@ -179,7 +187,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"uuy56649@omeie.com\", \r\n    \"password\":\"123\"\r\n}",
+							"raw": "{\r\n    \"email\":\"bvh88940@nezid.com\", \r\n    \"password\":\"123\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -187,11 +195,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:4000/auth/login",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/auth/login",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"auth",
 								"login"
@@ -202,32 +212,22 @@
 				},
 				{
 					"name": "VERIFICATION USERS",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "localhost:4000/auth/otp/84c4b2a6-2a9e-42a5-8cea-9b320fe6a895/534601",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/auth/otp/2a2e0c8c-0118-4c48-8c1e-71c44d4afa02/195924",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"auth",
 								"otp",
-								"84c4b2a6-2a9e-42a5-8cea-9b320fe6a895",
-								"534601"
+								"2a2e0c8c-0118-4c48-8c1e-71c44d4afa02",
+								"195924"
 							]
 						}
 					},
@@ -244,11 +244,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/category",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/category",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"category"
 							]
@@ -262,11 +264,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/category/1",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/category/1",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"category",
 								"1"
@@ -282,7 +286,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Side Dish\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Juice\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -290,11 +294,13 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:4000/category",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/category",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"category"
 							]
@@ -309,7 +315,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Snack\"\r\n}",
+							"raw": "{\r\n    \"name\" : \"Drink\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -317,14 +323,16 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:4000/category/2",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/category/4",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"category",
-								"2"
+								"4"
 							]
 						}
 					},
@@ -336,11 +344,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/category/delete/4",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/category/delete/4",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"category",
 								"delete",
@@ -358,24 +368,16 @@
 				{
 					"name": "GET RECIPE",
 					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
-									"type": "string"
-								}
-							]
-						},
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/recipe",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/recipe",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"recipe"
 							]
@@ -394,7 +396,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU3NjAzZDRhLTBhODUtNDk5Yy05YzBiLTYzNTcwMGM0NGQ3NCIsImVtYWlsIjoidWV0Nzk2NTBAbmV6aWQuY29tIiwibmFtZSI6IlRldSIsInBob3RvIjpudWxsLCJ2YWxpZCI6MSwib3RwIjoiNDgwMDU2IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDJUMTk6NTM6NDMuMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjc3ODEyNDM5LCJleHAiOjE2NzkxMjY0Mzl9.6fATuYahuIFJdQOaew4C_jLtsxH1M-xHMLiCWTLITXI",
 									"type": "string"
 								}
 							]
@@ -406,11 +408,13 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "localhost:4000/recipe/myRecipe",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/recipe/myRecipe",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"recipe",
 								"myRecipe"
@@ -425,18 +429,20 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/recipe?search=Sate",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/recipe?search=Bakar",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"recipe"
 							],
 							"query": [
 								{
 									"key": "search",
-									"value": "Sate"
+									"value": "Bakar"
 								}
 							]
 						}
@@ -449,11 +455,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/recipe?sortby=created_at&sort=desc&page=1&limit=10",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/recipe?sortby=created_at&sort=desc&page=1&limit=10",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"recipe"
 							],
@@ -492,7 +500,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhMmUwYzhjLTAxMTgtNGM0OC04YzFlLTcxYzQ0ZDRhZmEwMiIsImVtYWlsIjoiYnZoODg5NDBAbmV6aWQuY29tIiwibmFtZSI6IkJ2aCIsInBob3RvIjpudWxsLCJ2YWxpZCI6MSwib3RwIjoiMTk1OTI0IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDM6MjY6MjcuMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjc3ODE0MjY1LCJleHAiOjE2NzkxMjgyNjV9.Ahq0wrbiKKdu7QezoQGcz0oQyxtl7UpSdqT-6-1_Y3I",
 									"type": "string"
 								}
 							]
@@ -504,32 +512,34 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Roti Bakar",
+									"value": "Bolu Mentega",
 									"type": "text"
 								},
 								{
 									"key": "ingredient",
-									"value": "Roti dan Selai Cokelat",
+									"value": "Tepung, Mentega, dan Baking soda",
 									"type": "text"
 								},
 								{
 									"key": "photo",
 									"type": "file",
-									"src": "/C:/Users/masfa/Downloads/Image/roti.jpeg"
+									"src": "/C:/Users/masfa/Downloads/Image/Bolu-Mentega.jpeg"
 								},
 								{
 									"key": "category_id",
-									"value": "1",
+									"value": "2",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "localhost:4000/recipe",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/recipe",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"recipe"
 							]
@@ -545,7 +555,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjJhMmUwYzhjLTAxMTgtNGM0OC04YzFlLTcxYzQ0ZDRhZmEwMiIsImVtYWlsIjoiYnZoODg5NDBAbmV6aWQuY29tIiwibmFtZSI6IkJ2aCIsInBob3RvIjpudWxsLCJ2YWxpZCI6MSwib3RwIjoiMTk1OTI0IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDMtMDNUMDM6MjY6MjcuMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjc3ODE0MjY1LCJleHAiOjE2NzkxMjgyNjV9.Ahq0wrbiKKdu7QezoQGcz0oQyxtl7UpSdqT-6-1_Y3I",
 									"type": "string"
 								}
 							]
@@ -553,24 +563,45 @@
 						"method": "PUT",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\" : \"Sate Bakar\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Bolu Mentega Susu",
+									"type": "text"
+								},
+								{
+									"key": "ingredient",
+									"value": "Jeruk",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "photo",
+									"type": "file",
+									"src": "/C:/Users/masfa/Downloads/Image/roti.jpeg",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
 								}
-							}
+							]
 						},
 						"url": {
-							"raw": "localhost:4000/recipe/update/5",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/recipe/update/2",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"recipe",
 								"update",
-								"5"
+								"2"
 							]
 						}
 					},
@@ -584,7 +615,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg0Mjk5MjdhLWY1NTctNDNjZS1hZGMyLTFlODJhYWJhZjQyZCIsImVtYWlsIjoiYWtiYXJAbWFpbC5jb20iLCJuYW1lIjoiQWtiYXIiLCJwaG90byI6bnVsbCwidmFsaWQiOjAsIm90cCI6bnVsbCwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjJUMDQ6MDE6MTguMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsImlhdCI6MTY3NzA3NjAwOCwiZXhwIjoxNjc4MzkwMDA4fQ.zMJjt4CHxhYue3Sd2LW93ive3XowqhrFjTYpY0cwZ9A",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlkNDNjOWQyLTZkMmEtNDk4Yy1iODNlLWJlNzNjZWVmZmY0NCIsImVtYWlsIjoiY3V5MjA3NjJAb21laWUuY29tIiwibmFtZSI6IkN1eSIsInBob3RvIjpudWxsLCJ2YWxpZCI6MSwib3RwIjoiNTY5Njk2IiwiY3JlYXRlZF9hdCI6IjIwMjMtMDItMjdUMTk6Mzc6MjYuMDAwWiIsImRlbGV0ZWRfYXQiOm51bGwsInJvbGUiOiJVc2VyIiwiaWF0IjoxNjc3NTUxOTgxLCJleHAiOjE2Nzg4NjU5ODF9.mRQoiZkkHS4nwXnPTq9-G2yPHiKKuxoY5FJmxvdALdE",
 									"type": "string"
 								}
 							]
@@ -592,15 +623,17 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "localhost:4000/recipe/delete/1",
+							"raw": "https://long-tan-monkey-veil.cyclic.app/recipe/delete/9",
+							"protocol": "https",
 							"host": [
-								"localhost"
+								"long-tan-monkey-veil",
+								"cyclic",
+								"app"
 							],
-							"port": "4000",
 							"path": [
 								"recipe",
 								"delete",
-								"1"
+								"9"
 							]
 						}
 					},
