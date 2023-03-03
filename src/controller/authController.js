@@ -35,7 +35,7 @@ const AuthController = {
                         res.status(401).json({status:401,message:`Register failed`})
                     } else {
                         try {
-                            let url = `http://${process.env.BASE_URL}:${process.env.PORT}/auth/otp/${id}/${otp}`
+                            let url = `https://long-tan-monkey-veil.cyclic.app/auth/otp/${id}/${otp}`
                             let sendEmail =  email(req.body.email,otp,url,req.body.name)
                             if(sendEmail == 'email not send'){
                                 res.status(404).json({status:404,message:`Register failed, Email not send`})                
