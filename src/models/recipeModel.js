@@ -3,7 +3,8 @@ const Pool = require('../config/db')
 const selectRecipe = (data) => {
   let {search,sortby,sort,page,limit} = data
   getQuery = `
-    SELECT 
+    SELECT
+      recipe.id, 
       recipe.name,
       recipe.ingredient,
       recipe.created_at as post_time, 
@@ -41,7 +42,8 @@ const selectRecipeByUserId = (data) => {
   console.log(data)
   let {search,sortby,sort,id} = data
   return Pool.query(
-    `SELECT 
+    `SELECT
+      recipe.id,  
       recipe.name,
       recipe.ingredient,
       recipe.created_at as post_time, 
