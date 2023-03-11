@@ -4,6 +4,21 @@ const cloudinary = require("../config/cloudinary")
 const recipeController = {
     getDetailRecipe: async (req,res,next)=>{
         try {
+            let {id} = req.params
+
+            let dataCheck = await selectRecipeById(id)
+        
+            if(dataCheck.rows[0]){
+                res.status(200).json({status:200,message:`data recipe found`,data:dataCheck.rows})
+            } else {
+                res.status(400).json({status:400,message:`data recipe not found`})
+            }   
+        } catch (error) {
+            next(error)
+        }
+    },
+    getUserRecipe: async (req,res,next)=>{
+        try {
             let {search,sortby,sort} = req.query
             let data = {
                 search: search || '',
