@@ -10,7 +10,8 @@ const selectRecipe = (data) => {
       recipe.created_at as post_time, 
       category.name as category,
       users.name as creator,
-      recipe.photo
+      recipe.photo,
+      users.photo as creator_photo
     FROM 
       recipe 
     JOIN 
@@ -49,7 +50,8 @@ const selectRecipeByUserId = (data) => {
       recipe.created_at as post_time, 
       category.name as category,
       users.name as creator,
-      recipe.photo
+      recipe.photo,
+      users.photo as creator_photo
     FROM 
       recipe 
     JOIN 
@@ -75,7 +77,8 @@ const selectRecipeById = (data) => {
       recipe.photo,
       recipe.deleted_at as delete_time,
       recipe.users_id,
-      recipe.category_id
+      recipe.category_id,
+      users.photo as creator_photo
     FROM 
       recipe 
     JOIN 
