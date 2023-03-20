@@ -2,7 +2,7 @@ const {selectUsersById} = require('../models/usersModel')
 const cloudinary = require("../config/cloudinary")
 
 const updateUserChecker = async (req,res,next) => {
-    let id = req.params.id
+    let id = req.payload.id
     let name = req.body.name
     let email = req.body.email
     let photo = req.file
