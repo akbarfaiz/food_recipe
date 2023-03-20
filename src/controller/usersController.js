@@ -66,12 +66,14 @@ const UsersController = {
         try {
             let id = req.payload.id
             let name = req.body.name
+            let email = req.body.email
+            let photo = req.body.photo
     
             let checkData = await selectUsersById(id)
             if (!checkData.rows[0]) {
                 res.status(404).json({status:404,message:`id invalid`})
             } else {
-                await updateUsers(id,name)
+                await updateUsers(id,name,email,photo)
                 let newData = await selectUsersById(id)
                 res.status(200).json({status:200,message:`update data successfully`,data:newData.rows})
             }   

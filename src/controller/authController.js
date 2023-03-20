@@ -25,6 +25,7 @@ const AuthController = {
                         email: req.body.email,
                         password: await argon2.hash(req.body.password),
                         name: req.body.name,
+                        photo: 'https://res.cloudinary.com/dfwx7ogug/image/upload/v1679293948/profile/blank-profile-picture-973460_1280_omhjlv.webp',
                         otp: otp,
                         role: req.body.role || 'User'
                     }

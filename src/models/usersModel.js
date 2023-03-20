@@ -38,10 +38,9 @@ const deleteUsersById = (data) => {
   );
 }
 
-const updateUsers = (id,name) => {
-  console.log(id,name)
+const updateUsers = (id,name,email,photo) => {
   return Pool.query(
-    `UPDATE users SET name = '${name}' WHERE id = '${id}';`
+    `UPDATE users SET name = '${name}',email = '${email}', photo = '${photo}' WHERE id = '${id}';`
   );
 }
 
@@ -58,11 +57,11 @@ const findUser = (email) => {
 }
 
 const createUser = (data) => {
-  const {email,name,password,id,otp,role} = data
+  const {email,name,password,photo,id,otp,role} = data
   let time = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '')
   console.log(data)
   return new Promise((resolve,reject)=>
-  Pool.query(`INSERT INTO users(id,email,name,password,created_at,OTP,role) VALUES('${id}','${email}','${name}','${password}','${time}','${otp}','${role}')`,(err,result)=>{
+  Pool.query(`INSERT INTO users(id,email,name,password,created_at,OTP,role,photo) VALUES('${id}','${email}','${name}','${password}','${time}','${otp}','${role}','${photo}')`,(err,result)=>{
     if(!err){
       resolve(result)
     } else {
