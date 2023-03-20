@@ -39,6 +39,8 @@ const deleteUsersById = (data) => {
 }
 
 const updateUsers = (id,name,email,photo) => {
+  console.log(id)
+  console.log(name,email,photo)
   return Pool.query(
     `UPDATE users SET name = '${name}',email = '${email}', photo = '${photo}' WHERE id = '${id}';`
   );
