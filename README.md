@@ -1,12 +1,45 @@
 <h1 align="center">Food Recipe API</h1>
+<div align="center">
+  <img src='https://github.com/akbarfaiz/recipe-react-web/assets/87055460/260204ac-5591-4c4f-a08b-30e23f4a5a22' width="150" height="150" />
+</div>
+
+## Table of Contents
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#requirements">Requirements</a></li>
+    <li><a href="#installation-and-usage-steps">Installation and Usage Steps</a></li>
+    <li><a href="#api-route">API Route</a></li>
+    <li><a href="#related-project">Related Project</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
+
+## About The Project
 Food Recipe API is an API that functions as a Backend containing user, category, and recipe data. This API is built with <a href="https://expressjs.com">ExpressJs</a> which is a simple and flexible web application framework that uses <a href="https://nodejs.org/en/about/">NodeJs<a/>.<br>
 
-<h1 align="center"><img src="Flowchart_Aplikasi.png"></h1>
+<div align="center"><img src="Flowchart_Aplikasi.png"></div>
+
+### Built With
+
+This app was built with some technologies below:
+
+- [Node.js](https://nodejs.org/en/)
+- [Express.js](https://expressjs.com/)
+- [JSON Web Tokens](https://jwt.io/)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## Requirements
 1. <a href="https://nodejs.org/en/">Node Js</a>
 2. <a href="https://www.postman.com/downloads/">Postman</a>
-3. Database (PostgreSQL or PhpMyAdmin)
+3. Database (<a href="https://www.postgresql.org/download/">PostgreSQL</a>)
 4. Server (Localhost or Online Server)
 5. <a href="https://cloudinary.com">Cloudinary</a>
 
@@ -42,7 +75,11 @@ PHOTO_NAME= //Your Cloudinary CLoud Name
 PHOTO_KEY= //Your Cloudinary API Key
 PHOTO_SECRET= //Your Cloudinary API Secret
 ```
-8. Open Postman, choose HTTP request method and  request URL like localhost:8080/
+8. Run your project with command below
+```bash
+  nodemon //To Start Development
+```
+9. Open Postman, choose HTTP request method and  request URL like localhost:4000/
 
 ## API Route
  * `/`
@@ -124,6 +161,11 @@ PHOTO_SECRET= //Your Cloudinary API Secret
    ```
    id = Recipe ID , Autorization = Bearer Token , Token = User Token  
    ```
+  
+# Related Project
+:rocket: [API](https://long-tan-monkey-veil.cyclic.app)<br>
+:rocket: [Recipe Website](https://github.com/akbarfaiz/recipe-react-web)<br>
+:rocket: [Recipe Mobile App](https://github.com/akbarfaiz/recipe-mobile-app)<br>
 
-## My Project
- * <a href="https://long-tan-monkey-veil.cyclic.app">Food Recipe API Web Server</a>
+## License
+Distributed under the [MIT](/LICENSE) License.
